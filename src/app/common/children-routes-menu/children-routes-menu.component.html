@@ -1,0 +1,8 @@
+<ol class="breadcrumb">
+  <li *ngFor="let route of childRoutes | async"
+      class="breadcrumb-item">
+    <a [routerLink]="[route.url]">
+      {{ route.label }}
+    </a>
+  </li>
+</ol>

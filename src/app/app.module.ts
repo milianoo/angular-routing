@@ -1,16 +1,38 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+
+// modules
+import { AuthModule } from './auth/auth.module';
+import { AccountsModule } from './accounts/accounts.module';
+import { AppRoutingModule } from './app-routing.module';
+
+// app components
+import { RootComponent } from './root/root.component';
+import { NotFoundComponent } from './common/not-found/not-found.component';
+import { NotAuthorizedComponent } from './common/not-authorized/not-authorized.component';
+import { BreadcrumbsComponent } from './common/breadcrumbs/breadcrumbs.component';
+import { ChildrenRoutesMenuComponent } from './common/children-routes-menu/children-routes-menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
-    BrowserModule
+    CommonModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+
+    AccountsModule,
+    AuthModule.forRoot(),
+    AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    RootComponent,
+    NotFoundComponent,
+    NotAuthorizedComponent,
+    BreadcrumbsComponent,
+    ChildrenRoutesMenuComponent
+  ],
+  bootstrap: [ RootComponent ]
 })
 export class AppModule { }
