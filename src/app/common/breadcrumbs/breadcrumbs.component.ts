@@ -7,7 +7,7 @@ import {Observable} from 'rxjs';
 @Component({
   selector: 'app-breadcrumbs',
   templateUrl: './breadcrumbs.component.html',
-  styleUrls: ['./breadcrumbs.component.css']
+  styleUrls: ['./breadcrumbs.component.scss']
 })
 export class BreadcrumbsComponent implements OnInit {
 

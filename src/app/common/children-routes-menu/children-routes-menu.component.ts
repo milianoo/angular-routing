@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-children-routes-menu',
   templateUrl: './children-routes-menu.component.html',
-  styleUrls: ['./children-routes-menu.component.css']
+  styleUrls: ['./children-routes-menu.component.scss']
 })
 export class ChildrenRoutesMenuComponent implements OnInit {
 
