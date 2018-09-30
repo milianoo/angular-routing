@@ -1,8 +1,28 @@
-ol {
+.breadcrumb {
+  padding: 20px;
+  background: #eee;
   list-style-type: none;
-}
 
-ol li {
-  display: inline;
-  margin: 0 5px;
+  .breadcrumb-item {
+
+    color: darkgray;
+    display: inline;
+    margin: 0 5px;
+
+    .breadcrumb-item-label {
+      cursor: pointer;
+
+      &:hover {
+        color: #737373;
+      }
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    &.last {
+      color: black;
+    }
+  }
 }

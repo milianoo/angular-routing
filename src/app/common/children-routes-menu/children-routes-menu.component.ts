@@ -19,7 +19,6 @@ export class ChildrenRoutesMenuComponent implements OnInit {
   ) {
 
     this.childRoutes = this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
       distinctUntilChanged(),
       map(() => this.getChildrenRoutes(this.activatedRoute))
     );
@@ -31,8 +30,11 @@ export class ChildrenRoutesMenuComponent implements OnInit {
 
   private getChildrenRoutes(route: ActivatedRoute): NavigationRoute[] {
 
+    console.log(route.children);
+
     const ROUTE_DATA = 'data';
     const ROUTE_DATA_LABEL = 'label';
+    const ROUTE_DATA_ICON = 'icon';
 
     const routes = [];
     const children = route.firstChild.routeConfig.children;
@@ -48,7 +50,8 @@ export class ChildrenRoutesMenuComponent implements OnInit {
 
       routes.push({
         url: child.path,
-        label: child.data[ROUTE_DATA_LABEL]
+        label: child.data[ROUTE_DATA_LABEL],
+        icon: child.data[ROUTE_DATA_ICON]
       });
     });
 

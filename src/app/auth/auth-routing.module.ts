@@ -15,14 +15,16 @@ const routes: Routes = [
         path: 'sign-in/:id',
         component: LoginComponent,
         data: {
-          label: 'sign in'
+          label: 'sign in',
+          icon: 'fas fa-sign-in-alt'
         }
       },
       {
         path: 'sign-up',
         component: RegisterComponent,
         data: {
-          label: 'sign up'
+          label: 'sign up',
+          icon: 'fas fa-user-plus'
         }
       }
     ]

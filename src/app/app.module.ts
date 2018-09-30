@@ -8,6 +8,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AuthModule } from './auth/auth.module';
 import { AccountsModule } from './accounts/accounts.module';
 import { AppRoutingModule } from './app-routing.module';
+import { MaterialDesignModule } from './material-design/material-design.module';
 
 // app components
 import { RootComponent } from './root/root.component';
@@ -21,6 +22,7 @@ import { ChildrenRoutesMenuComponent } from './common/children-routes-menu/child
     CommonModule,
     BrowserAnimationsModule,
     BrowserModule,
+    MaterialDesignModule,
 
     AccountsModule,
     AuthModule.forRoot(),

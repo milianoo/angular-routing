@@ -3,7 +3,24 @@
 </p>
 
 <div>
-  <app-children-routes-menu></app-children-routes-menu>
+
+  <mat-toolbar id="app-header" color="accent">
+
+    <mat-toolbar-row>
+
+      <button [routerLink]="['home']" mat-button>
+        <mat-icon>home</mat-icon> Home
+      </button>
+
+      <app-children-routes-menu></app-children-routes-menu>
+
+    </mat-toolbar-row>
+
+  </mat-toolbar>
+
+
+
   <app-breadcrumbs></app-breadcrumbs>
+
   <router-outlet></router-outlet>
 </div>

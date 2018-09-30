@@ -26,7 +26,8 @@ const routes: Routes = [
     redirectTo: '',
     pathMatch: 'full',
     data: {
-      label: 'Home'
+      label: 'Home',
+      icon: 'home'
     }
   },
   {
